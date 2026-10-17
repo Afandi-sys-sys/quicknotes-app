@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --border-color: rgb(168, 140, 106);
+    --error-color: #f09f9f;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segeo UI", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #261C14;
+    color:beige;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header{
+    background-color: #594936;
+    color: rgb(228, 155, 65);
+    text-align:center;
+    padding: 28px 16px
+}
+
+header h1{
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p{
+    margin: 6px 0 0;
+}
+
+main{
+    max-width: 640px;
+    margin: 24px auto;
+    padding: 0 16px;
+    flex: 0;
+    width: 100%;
+}
+
+section{
+    background-color: #534a36;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+
+section h2{
+    margin-top: 0;
+}
+
+#note-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#note-form button{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#note-category{
+    margin-bottom: 8px;
+}
+
+
+label{
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+button {
+  background-color: rgb(168, 140, 106);
+  color: rgb(24, 2, 2);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(240, 240, 154);
+  transform: translateY(-2px);
+}
+
+
+
+footer{
+    text-align: center;
+    color: bisque;
+    padding: 16px;
+}
+
+input, select{
+    width: 100%;
+    height: fit-content;
+    padding: 12px;
+    border: 1px solid rgb(168, 140, 106);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: burlywood;
+}
+
+input:focus, select:focus{
+    outline: 2px solid rgb(168, 140, 106);
+}
+
+
+ #search-input { 
+    margin-bottom: 12px; 
+} 
+ 
+#note-count { font-weight: bold; 
+    margin: 10px 0; 
+} 
+
+#notes-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+} 
+#notes-list li { 
+    background-color: burlywood; 
+    border: 1px solid var(--border-color); 
+    border-radius: 8px; 
+    padding: 15px; 
+    margin-bottom: 12px; 
+    overflow-wrap: anywhere; 
+} 
+
+#notes-list li button { 
+    margin: 8px 8px 0 0; 
+    padding: 8px 12px; 
+    font-size: 0.9rem; 
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+} 
+
+/* Personal category */
+#notes-list li.category-personal {
+    border-left: 6px solid teal;
+    background-color: #1D2937;
+    color: beige;
+}
+
+/* Work category */
+#notes-list li.category-work {
+    border-left: 6px solid darkred;
+    background-color: #365344;
+    color: beige;
+}
+
+/* Study category */
+#notes-list li.category-study {
+    border-left: 6px solid blue;
+    background-color: #8C7354;
+    color: beige;
+}
+
+
+
+#error-message { 
+    color: var(--error-color); 
+    font-weight: bold; 
+    margin-bottom: 0; 
+} 
+ 
+
+@media (max-width: 600px) { 
+    main { width: 100%; 
+        margin: 18px auto; 
+        padding: 0 12px;
+    } 
+    
+    section { padding: 18px; 
+    } 
+    
+    header h1 { font-size: 1.7rem; 
+    } 
+
+    #note-form{
+        flex-direction: column;
+    }
+
+    #note-form input,
+    #note-form select,
+    #note-form button{
+        width: 100%;
+    }
+    
+    button { width: 100%; 
+    } 
+}

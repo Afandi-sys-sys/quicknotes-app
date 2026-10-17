@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A notes taking tool">
+
+    <title>QuickNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>QuickNotes</h1>
+        <p>Capture ideas at the speed of thought</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Take Your Notes</h2>
+
+            <form id="note-form">
+                <label for="note-input">New Note</label>
+
+                <input
+                    type="text"
+                    id="note-input"
+                    placeholder="Start typing here..."
+                >
+
+                <label for="note-category">Choose category</label>
+
+                <select id="note-category" name="category" required>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</optinal>
+                </select>
+
+                <button type="submit">Add Note</button>
+            </form>
+
+            <p id="error-message" role="alert"></p>
+        </section>
+
+        <section id="notes-section">
+            <h2>My Notes</h2>
+
+            <label for="search-input">Search notes:</label>
+
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search for your notes..."
+            >
+
+            <p id="note-count">No notes yet.</p>
+
+
+            <ul id="notes-list"></ul>
+            <button type="button" id="clear-all-btn">Clear All</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SonicNotes Toolkit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
